@@ -15,15 +15,7 @@ namespace AtsuMoriFatCook
             this.Text = Resource.Title;
 
             _recipeList = new RecipeList();
-
-            //TableLayoutColumnStyleCollection columnStyles = _tableLayoutPanel.ColumnStyles;
-            //foreach (ColumnStyle style in columnStyles)
-            //{
-            //    if (style.SizeType == SizeType.Percent)
-            //    {
-            //        style.Width = 15;
-            //    }
-            //}
+            _fruitsComboBox.Text = Setting.Default.デフォルトフルーツ;
 
             TableLayoutRowStyleCollection rowStyles = _tableLayoutPanel.RowStyles;
             foreach (RowStyle rowStyle in rowStyles)
