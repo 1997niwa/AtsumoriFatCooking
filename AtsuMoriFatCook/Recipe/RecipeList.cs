@@ -10,7 +10,7 @@ namespace AtsuMoriFatCook.Recipe
     internal class RecipeList
     {
         //設定名、売値、こむぎこ、ぜんりゅうふん、さとう、こくとう、トマトピューレ、じゃがいも、にんじん、トマト、かぼちゃ、リンゴ、オレンジ、ナシ、モモ、さくらんぼ、ヤシのみ
-        internal List<RecipeModel> SettingItems { get; private set; } = new List<RecipeModel>
+        internal List<RecipeModel> RecipeItems { get; private set; } = new List<RecipeModel>
         {
                 new RecipeModel("オーガニックパン",950,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0),
                 new RecipeModel("かしパン",1260,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0),
