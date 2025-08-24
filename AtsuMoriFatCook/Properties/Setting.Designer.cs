@@ -1258,5 +1258,17 @@ namespace AtsuMoriFatCook.Properties {
                 this["リンゴのタルト"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("リンゴ")]
+        public string デフォルトフルーツ {
+            get {
+                return ((string)(this["デフォルトフルーツ"]));
+            }
+            set {
+                this["デフォルトフルーツ"] = value;
+            }
+        }
     }
 }

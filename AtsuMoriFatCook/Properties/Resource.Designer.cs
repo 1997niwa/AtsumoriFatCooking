@@ -71,7 +71,7 @@ namespace AtsuMoriFatCook.Properties {
         }
         
         /// <summary>
-        ///   AtsuMoriFatCooking に類似しているローカライズされた文字列を検索します。
+        ///   AtsumoriFatCooking に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Title {
             get {

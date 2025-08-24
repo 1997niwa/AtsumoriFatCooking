@@ -30,16 +30,17 @@
         {
             label1 = new Label();
             _tableLayoutPanel = new TableLayoutPanel();
+            _fruitsComboBox = new ComboBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(16, 21);
+            label1.Location = new Point(12, 21);
             label1.Name = "label1";
-            label1.Size = new Size(46, 17);
+            label1.Size = new Size(122, 17);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "島のデフォルトフルーツ\r\n";
             // 
             // _tableLayoutPanel
             // 
@@ -47,9 +48,9 @@
             _tableLayoutPanel.BackColor = Color.White;
             _tableLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Outset;
             _tableLayoutPanel.ColumnCount = 2;
-            _tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 25F));
-            _tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            _tableLayoutPanel.Location = new Point(272, 12);
+            _tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            _tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
+            _tableLayoutPanel.Location = new Point(318, 12);
             _tableLayoutPanel.Name = "_tableLayoutPanel";
             _tableLayoutPanel.RowCount = 38;
             _tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
@@ -93,12 +94,23 @@
             _tableLayoutPanel.Size = new Size(200, 340);
             _tableLayoutPanel.TabIndex = 1;
             // 
+            // _fruitsComboBox
+            // 
+            _fruitsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            _fruitsComboBox.FormattingEnabled = true;
+            _fruitsComboBox.Items.AddRange(new object[] { "リンゴ", "オレンジ", "ナシ", "モモ", "さくらんぼ" });
+            _fruitsComboBox.Location = new Point(140, 18);
+            _fruitsComboBox.Name = "_fruitsComboBox";
+            _fruitsComboBox.Size = new Size(121, 25);
+            _fruitsComboBox.TabIndex = 2;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(484, 361);
+            ClientSize = new Size(530, 357);
+            Controls.Add(_fruitsComboBox);
             Controls.Add(_tableLayoutPanel);
             Controls.Add(label1);
             Font = new Font("Meiryo UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 128);
@@ -114,5 +126,6 @@
 
         private Label label1;
         private TableLayoutPanel _tableLayoutPanel;
+        private ComboBox _fruitsComboBox;
     }
 }

@@ -1,5 +1,5 @@
 using AtsuMoriFatCook.Properties;
-using System.Drawing;
+using AtsuMoriFatCook.Recipe;
 
 namespace AtsuMoriFatCook
 {
@@ -13,9 +13,19 @@ namespace AtsuMoriFatCook
             this.Icon = Resource.Icon;
             this.Text = Resource.Title;
 
-            _listRetention = new ListRetention();
+            _recipeList = new RecipeList();
+            _fruitsComboBox.Text = Setting.Default.デフォルトフルーツ;
 
-            for (int i = 0; i < _listRetention.SettingItems.Count; i++)
+            TableLayoutRowStyleCollection rowStyles = _tableLayoutPanel.RowStyles;
+            foreach (RowStyle rowStyle in rowStyles)
+            {
+                if (rowStyle.SizeType == SizeType.Absolute)
+                {
+                    rowStyle.Height = 33;
+                }
+            }
+
+            for (int i = 0; i < _recipeList.SettingItems.Count; i++)
             {
                 // 左列にチェックボックス
                 CheckBox cb = new CheckBox();
@@ -36,7 +46,8 @@ namespace AtsuMoriFatCook
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            for (int i = 0; i < _listRetention.SettingItems.Count; i++)
+            Setting.Default.デフォルトフルーツ = _fruitsComboBox.Text;
+            for (int i = 0; i < _recipeList.SettingItems.Count; i++)
             {
                 _listRetention.SettingItems[i] = ((CheckBox)_tableLayoutPanel.GetControlFromPosition(0, i)).Checked ? 1 : 0;
             }
