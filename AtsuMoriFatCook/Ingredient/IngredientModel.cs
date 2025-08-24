@@ -8,10 +8,10 @@ namespace AtsuMoriFatCook.Ingredient
 {
     internal class IngredientModel
     {
-        internal string Name { get; private set; }
+        internal IngredientEnum Name { get; private set; }
         internal int Price { get; private set; }
 
-        internal IngredientModel(string name, int price)
+        internal IngredientModel(IngredientEnum name, int price)
         {
             Name = name;
             Price = price;
