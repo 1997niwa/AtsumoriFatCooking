@@ -311,5 +311,8 @@
     <Setting Name="リンゴのタルト" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="デフォルトフルーツ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">リンゴ</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
